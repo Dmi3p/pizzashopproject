@@ -126,3 +126,9 @@ LOGIN_REDIRECT_URL = '/'   #Требуется для реализации ре�
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  #переменные, необходимые для работы с файлами
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #что-то там для Хероку
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASE['default'].update(db_from_env)
