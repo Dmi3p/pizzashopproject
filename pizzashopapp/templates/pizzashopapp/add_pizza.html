@@ -5,15 +5,15 @@
   <div class="panel">
     <div class="panel-heading bg-ruby">
       <h4 class="panel-title text-center text-white">
-        Профиль
+        Добавить Пиццу
       </h4>
     </div>
     <div class="panel-body">
       <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {% bootstrap_form user_form %}
-        {% bootstrap_form pizzashop_form %}
-        <button type="submit" class="btn btn-red">Обновить</button>
+        {% bootstrap_form form %}
+
+        <button type="submit" class="btn btn-red">Добавить</button>
       </form>
     </div>
   </div>

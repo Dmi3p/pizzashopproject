@@ -40,5 +40,7 @@ urlpatterns = [
 
     path('pizzashopapp/account', views.pizzashop_account, name='pizzashop-account'),
     path('pizzashopapp/pizza', views.pizzashop_pizza, name='pizzashop-pizza'),
+    path('pizzashopapp/pizza/add', views.pizzashop_add_pizza, name='pizzashop-add-pizza'),
+    path('pizzashopapp/pizza/edit/<pizza_id>', views.pizzashop_edit_pizza, name='pizzashop-edit-pizza')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #тоже нужно для работы с файлами
